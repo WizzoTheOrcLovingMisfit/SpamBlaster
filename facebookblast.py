@@ -1,5 +1,5 @@
 import time
-
+import pylint
 import pyautogui
 from pynput import mouse
 
@@ -18,8 +18,7 @@ with mouse.Events() as events:
             if event.button == mouse.Button.left:
                 while 1: 
                     ''' Loop is broken by default with pyautogui\'s escape, putting the mouse in the top left corner'''
-                    print('innit')
-                    print(event.button)
+                    
                     pyautogui.press('enter')
                     pyautogui.write(blaster)    
                     time.sleep(.01)
